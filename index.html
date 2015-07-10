@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="src/materialize/css/materialize.min.css"  media="screen,projection"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Import my css -->
+		<link rel="stylesheet" type="text/css" href="src/myStyleSheet.css">
+
+		<!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+
+
+
+
+
+		<!-- ナビゲーションバーの設置 -->
+		<div  class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper yellow darken-3">
+					<a href="#" class="brand-logo right">Logo</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul id="nav-mobile" class="left hide-on-med-and-down">
+						<li class="waves-effect waves-light"><a href="index.html#introduction">はじめに</a></li>
+						<li class="waves-effect waves-light"><a href="index.html#card">カード</a></li>
+						<li class="waves-effect waves-light"><a href="index.html#icon">アイコン</a></li>
+						<li class="waves-effect waves-light"><a href="index.html#button">ボタン</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="index.html#introduction">はじめに</a></li>
+						<li><a href="index.html#card">カード</a></li>
+						<li><a href="index.html#icon">アイコン</a></li>
+						<li><a href="index.html#button">ボタン</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+
+
+
+
+		<!-- materializeの導入 -->
+		<div class="row">
+			<div class="col s12 m10 offset-m1  l8 offset-l2">
+				<h3 id="introduction">はじめに</h3>
+				<ul class="collapsible popout" data-collapsible="accordion">
+			    <li>
+			      <div class="collapsible-header active"><i class="material-icons">chat_bubble_outline</i>このドキュメントの役割</div>
+			      <div class="collapsible-body">
+							<p>
+								このドキュメントはデザインフレームワーク<a href="http://materializecss.com/">Materialize</a>の勉強ついでにまとめたものです。</br>
+								レスポンシブかつマテリアルなデザインを簡単に作ることができます。</br>
+								</br>
+								このドキュメントでは、どうやったらできるか早く知りたいよ！！という方向けに、ソースを明示しながらさらっていきます。</br>
+								</br>
+								このページのソースを<a href="https://github.com/masayuki610930/materialize_sample">Githubに公開</a>してます。こちらよりどうぞ。
+						</p>
+						</div>
+			    </li>
+			    <li>
+			      <div class="collapsible-header"><i class="material-icons">system_update_alt</i>ダウンロード</div>
+			      <div class="collapsible-body">
+							<div class="row">
+								<div>
+									<p>
+										<a href="http://materializecss.com/getting-started.html">公式サイト</a>からGETしましょう！</br>
+										</br>
+										Sassとかとりあえずいいので（分かる方にはフォローいらないので）、左側のボタンから.zipをダウンロードしましょう。
+									</p>
+								</div>
+								<div class="col s10 offset-s1 m8 offset-m2">
+									<a href="http://materializecss.com/getting-started.html"><img class="responsive-img" src="src/img/download.png"></a>
+								</div>
+							</div>
+						</div>
+			    </li>
+			    <li>
+			      <div class="collapsible-header"><i class="material-icons">input</i>セットアップ</div>
+			      <div class="collapsible-body">
+							<p>
+								.zipを解答すると3つのフォルダが中に入っています。css,font,jsです。詳細は<a href="http://materializecss.com/getting-started.html#setup">こちら</a>。cssとjsはそれぞれの中に入っているmaterialize.min.*さえあれば大丈夫です。</br>
+								</br>
+								その後（ファイルを適切な場所において、それに基づいて）htmlにリンクを書きましょう。</br>
+								<a href="https://gist.github.com/masayuki610930/3c6eb812c62dba2f61a6">こんな感じ</a>です！</br>
+							</p>
+						</div>
+			    </li>
+					<li>
+			      <div class="collapsible-header"><i class="material-icons">info</i>この部品について</div>
+			      <div class="collapsible-body">
+							<p>
+								<a href="http://materializecss.com/collapsible.html">Collapsible</a>という名前です。</br>
+								</br>
+								この例ではulタグのclassに"<b>popout</b>"をつけていて、少し面白い動きをしてくれます。デフォルトで展開しておく際は、ulの子要素が&lt;div class="collapsible-header <b>active</b>"&gt;となります。</br>
+								</br>
+								なおCollapsibleを使う際は、JavaScriptで<a href="http://materializecss.com/collapsible.html#intialization">初期処理</a>を記載する必要があるので、ご注意を！</br>
+							</p>
+						</div>
+			    </li>
+			  </ul>
+			</div>
+		</div>
+
+
+
+		<!-- カードの説明 -->
+		<div class="row">
+      <div class="col s12 m5 offset-m1 l4 offset-l2">
+				<h3 id="card">カード</h3>
+				<div class="card">
+					<div class="card-image waves-effect waves-block waves-light">
+	          <img class="activator" src="http://materializecss.com/images/sample-1.jpg">
+						<span class="card-title">タイトル</span>
+	        </div>
+          <div class="card-content">
+            <p>
+							マテリアルデザインでおなじみ、<a href="http://materializecss.com/cards.html">カード</a>がつくれ、このように画像をいれたり、リンク先を指定ができます。</br>
+							</br>
+							カードは&lt;div class="<b>card</b>"&gt;にて作れ、その入れ子として</br>
+							&lt;div class="<b>card-image</b>"&gt;</br>
+							&lt;div class="<b>card-content</b>"&gt;</br>
+							&lt;div class="<b>card-action</b>"&gt;</br>があります。</br>
+						</br>
+						右（もしくは下）のカードはマウスオーバーで浮き上がるエフェクトがついてます。これは、hoverableを指定することで可能です。</br>
+						&lt;div class="card <b>hoverable</b>"&gt;
+						</p>
+          </div>
+          <div class="card-action center">
+						<a href="#">リンク</a>
+          </div>
+        </div>
+      </div>
+			<div class="col s12 m5 l4">
+				<h3 id="icon">アイコン</h3>
+				<div class="card hoverable">
+	        <div class="card-image waves-effect waves-block waves-light">
+	          <img class="activator" src="http://materializecss.com/images/office.jpg">
+	        </div>
+	        <div class="card-content">
+	          <span class="card-title activator grey-text text-darken-4">アイコンを使う方法<i class="material-icons right">more_vert</i></span>
+	          <p><a href="http://materializecss.com/icons.html">アイコン一覧</a></p>
+	        </div>
+	        <div class="card-reveal">
+	          <span class="card-title grey-text text-darken-4">アイコンについて<i class="material-icons right">close</i></span>
+	          <p>
+							materializeではたくさんのアイコンを簡単に使えます。</br>
+						  </br>
+							準備として、cssを読み込みましょう。</br>
+							</br>
+							&lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;</br>
+							</br>
+							アイコンはタグiで書くことができます。</br>
+							</br>
+							&lt;i class="material-icons"&gt;info_outline&lt;/i&gt;</br>
+							</br>
+							iタグの中に<a href="http://materializecss.com/icons.html">アイコン一覧</a>の各アイコンの下にある文字列を指定すれば種類が変わります。</br>
+							上のiタグの例：<i class="material-icons">info_outline</i>
+						</p>
+	        </div>
+	      </div>
+      </div>
+    </div>
+
+
+		<!-- ボタンの説明 -->
+		<div class="row">
+      <div class="col s12 m10 offset-m1 l8 offset-l2">
+				<h3 id="button">ボタン</h3>
+				<div class="card">
+					<div class="card-content">
+
+
+
+						<div>
+							<h5>種類</h5>
+							標準のボタン　：　&lt;a class="<b>btn</b>"&gt;ボタン&lt;/a&gt;</br>
+							<a class="btn">ボタン</a></br></br>
+							左アイコンのボタン　：　&lt;a class="btn"&gt;&lt;i class="material-icons <b>left</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</br>
+							<a class="btn"><i class="material-icons left">thumb_up</i>ボタン</a></br></br>
+							右アイコンのボタン　：　&lt;a class="btn"&gt;&lt;i class="material-icons <b>right</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</br>
+							<a class="btn"><i class="material-icons right">thumb_up</i>ボタン</a></br></br>
+							submitボタン　：　&lt;<b>button</b> class="btn" <b>type="submit"</b> name="action"&gt;Submit&lt;<b>/button</b>&gt;</br>
+							<button class="btn" type="submit" name="action">Submit</button></br></br>
+							floating ボタン　：　&lt;a class="<b>btn-floating</b>"&gt;&lt;i class="material-icons"&gt;add&lt;/i&gt;ボタン&lt;/a&gt;</br>
+							<a class="btn-floating"><i class="material-icons">add</i></a></br></br>
+							</br>
+							<h5>エフェクト</h5>
+							waves-effect　：　&lt;a class="btn <b>waves-effect</b>"&gt;ボタン&lt;/a&gt;</br>
+							<a class="btn waves-effect ">ボタン</a></br></br>
+							waves-light　：　&lt;a class="btn waves-effect <b>waves-light</b>"&gt;ボタン&lt;/a&gt;</br>
+							<a class="btn waves-effect waves-light">ボタン</a></br></br>
+							</br>
+							<h5>画面右下のボタン</h5>
+							<a href="http://materializecss.com/buttons.html#floating">Fixed Action Button</a>と名前が付けられています。開く/閉じる効果をつけるためにはJavaScriptに追加する必要があります。
+							<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+								<a class="btn-floating btn-large red">
+									<i class="large material-icons">add</i>
+								</a>
+								<ul>
+									<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></i></a></li>
+									<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+									<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+									<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+								</ul>
+							</div>
+						</div>
+		      </div>
+		    </div>
+			</div>
+		</div>
+
+
+色、フォーム、サイズ
+
+
+
+
+
+
+
+
+		<div class="row">
+			<div class="col s12 m9 offset-m5 l6 offset-l7">
+				<div class="col s9 m7 l7">
+					<div class="card hoverable">
+	          <div class="card-content" style="padding: 0px;">
+							<div class="input-field col s12">
+			          <i class=" material-icons prefix  yellow-text text-darken-3">account_circle</i>
+			          <input id="icon_prefix" type="text" class="validate">
+			          <label for="icon_prefix">user name or account name</label>
+			        </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col s2" style="padding-top: 10px;">
+					<div class="input-field">
+	        	<a class="waves-effect waves-light btn  yellow darken-3"><i class="material-icons">search</i></a>
+	        </div>
+	      </div>
+			</div>
+    </div>
+
+
+
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="src/materialize/js/materialize.min.js"></script>
+
+		<!-- Import my script -->
+		<script type="text/javascript" src="src/myScript.js"></script>
+
+
+
+
+  </body>
+</html>
