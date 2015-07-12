@@ -24,14 +24,16 @@
 		<div  class="navbar-fixed">
 			<nav>
 				<div class="nav-wrapper yellow darken-3">
-					<a href="#" class="brand-logo right">Logo</a>
+					<a href="#" class="brand-logo right">Materializeの使い方</a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
 					<ul id="nav-mobile" class="left hide-on-med-and-down">
 						<li class="waves-effect waves-light"><a href="index.html#introduction">はじめに</a></li>
 						<li class="waves-effect waves-light"><a href="index.html#card">カード</a></li>
 						<li class="waves-effect waves-light"><a href="index.html#icon">アイコン</a></li>
 						<li class="waves-effect waves-light"><a href="index.html#button">ボタン</a></li>
 					</ul>
+
 					<ul class="side-nav" id="mobile-demo">
 						<li><a href="index.html#introduction">はじめに</a></li>
 						<li><a href="index.html#card">カード</a></li>
@@ -43,14 +45,13 @@
 		</div>
 
 
-
-
-
 		<!-- materializeの導入 -->
 		<div class="row">
 			<div class="col s12 m10 offset-m1  l8 offset-l2">
+
 				<h3 id="introduction">はじめに</h3>
 				<ul class="collapsible popout" data-collapsible="accordion">
+
 			    <li>
 			      <div class="collapsible-header active"><i class="material-icons">chat_bubble_outline</i>このドキュメントの役割</div>
 			      <div class="collapsible-body">
@@ -58,12 +59,13 @@
 								このドキュメントはデザインフレームワーク<a href="http://materializecss.com/">Materialize</a>の勉強ついでにまとめたものです。</br>
 								レスポンシブかつマテリアルなデザインを簡単に作ることができます。</br>
 								</br>
-								このドキュメントでは、どうやったらできるか早く知りたいよ！！という方向けに、ソースを明示しながらさらっていきます。</br>
+								とにかくMaterializeの使い方を早く知りたいよ！！という方向けに、ソースを明示しながら紹介していきます。</br>
 								</br>
-								このページのソースを<a href="https://github.com/masayuki610930/materialize_sample">Githubに公開</a>してます。こちらよりどうぞ。
+								このページのソースを<a href="https://github.com/masayuki610930/materialize_sample">Githubに公開</a>してます。
 						</p>
 						</div>
 			    </li>
+
 			    <li>
 			      <div class="collapsible-header"><i class="material-icons">system_update_alt</i>ダウンロード</div>
 			      <div class="collapsible-body">
@@ -72,7 +74,7 @@
 									<p>
 										<a href="http://materializecss.com/getting-started.html">公式サイト</a>からGETしましょう！</br>
 										</br>
-										Sassとかとりあえずいいので（分かる方にはフォローいらないので）、左側のボタンから.zipをダウンロードしましょう。
+										Sassとかとりあえずいいので、左側のボタンから.zipをダウンロードしましょう。
 									</p>
 								</div>
 								<div class="col s10 offset-s1 m8 offset-m2">
@@ -81,6 +83,7 @@
 							</div>
 						</div>
 			    </li>
+
 			    <li>
 			      <div class="collapsible-header"><i class="material-icons">input</i>セットアップ</div>
 			      <div class="collapsible-body">
@@ -92,6 +95,7 @@
 							</p>
 						</div>
 			    </li>
+
 					<li>
 			      <div class="collapsible-header"><i class="material-icons">info</i>この部品について</div>
 			      <div class="collapsible-body">
@@ -104,9 +108,12 @@
 							</p>
 						</div>
 			    </li>
+
 			  </ul>
+
 			</div>
 		</div>
+
 
 
 
@@ -115,10 +122,12 @@
       <div class="col s12 m5 offset-m1 l4 offset-l2">
 				<h3 id="card">カード</h3>
 				<div class="card">
+
 					<div class="card-image waves-effect waves-block waves-light">
 	          <img class="activator" src="http://materializecss.com/images/sample-1.jpg">
 						<span class="card-title">タイトル</span>
 	        </div>
+
           <div class="card-content">
             <p>
 							マテリアルデザインでおなじみ、<a href="http://materializecss.com/cards.html">カード</a>がつくれ、このように画像をいれたり、リンク先を指定ができます。</br>
@@ -132,21 +141,27 @@
 						&lt;div class="card <b>hoverable</b>"&gt;
 						</p>
           </div>
+
           <div class="card-action center">
-						<a href="#">リンク</a>
+						<a href="index.html#card">リンク</a>
           </div>
+
         </div>
       </div>
+
 			<div class="col s12 m5 l4">
 				<h3 id="icon">アイコン</h3>
 				<div class="card hoverable">
-	        <div class="card-image waves-effect waves-block waves-light">
-	          <img class="activator" src="http://materializecss.com/images/office.jpg">
-	        </div>
+
 	        <div class="card-content">
 	          <span class="card-title activator grey-text text-darken-4">アイコンを使う方法<i class="material-icons right">more_vert</i></span>
 	          <p><a href="http://materializecss.com/icons.html">アイコン一覧</a></p>
 	        </div>
+
+					<div class="card-image waves-effect waves-block waves-light">
+	          <img class="activator" src="src/img/icons.png">
+	        </div>
+
 	        <div class="card-reveal">
 	          <span class="card-title grey-text text-darken-4">アイコンについて<i class="material-icons right">close</i></span>
 	          <p>
@@ -164,6 +179,7 @@
 							上のiタグの例：<i class="material-icons">info_outline</i>
 						</p>
 	        </div>
+
 	      </div>
       </div>
     </div>
@@ -175,11 +191,11 @@
 				<h3 id="button">ボタン</h3>
 				<div class="card">
 					<div class="card-content">
-
-
-
 						<div>
+
 							<h5>種類</h5>
+								aタグやbuttonタグのclassにbtnをつけるだけです。お手軽！</br>
+								</br>
 							標準のボタン　：　&lt;a class="<b>btn</b>"&gt;ボタン&lt;/a&gt;</br>
 							<a class="btn">ボタン</a></br></br>
 							左アイコンのボタン　：　&lt;a class="btn"&gt;&lt;i class="material-icons <b>left</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</br>
@@ -191,14 +207,18 @@
 							floating ボタン　：　&lt;a class="<b>btn-floating</b>"&gt;&lt;i class="material-icons"&gt;add&lt;/i&gt;ボタン&lt;/a&gt;</br>
 							<a class="btn-floating"><i class="material-icons">add</i></a></br></br>
 							</br>
+
 							<h5>エフェクト</h5>
+							マテリアルデザイン特有のエフェクトも付けれます！</br>
+							</br>
 							waves-effect　：　&lt;a class="btn <b>waves-effect</b>"&gt;ボタン&lt;/a&gt;</br>
 							<a class="btn waves-effect ">ボタン</a></br></br>
 							waves-light　：　&lt;a class="btn waves-effect <b>waves-light</b>"&gt;ボタン&lt;/a&gt;</br>
 							<a class="btn waves-effect waves-light">ボタン</a></br></br>
 							</br>
+
 							<h5>画面右下のボタン</h5>
-							<a href="http://materializecss.com/buttons.html#floating">Fixed Action Button</a>と名前が付けられています。開く/閉じる効果をつけるためにはJavaScriptに追加する必要があります。
+							ずっと画面の右下にいるボタンは、<a href="http://materializecss.com/buttons.html#floating">Fixed Action Button</a>と名前が付けられています。開く/閉じる効果をつけるためにはJavaScriptに追加する必要があります。
 							<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 								<a class="btn-floating btn-large red">
 									<i class="large material-icons">add</i>
@@ -210,6 +230,226 @@
 									<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
 								</ul>
 							</div>
+
+						</div>
+		      </div>
+		    </div>
+			</div>
+		</div>
+
+
+
+		<!-- フォームの説明 -->
+		<div class="row">
+      <div class="col s12 m10 offset-m1 l8 offset-l2">
+				<h3 id="button">入力フォーム</h3>
+				<div class="card">
+					<div class="card-content">
+							Materializeを使えば入力フォームだって簡単です！</br>
+							</br>
+
+							<div class="row">
+								<form class="col s12">
+									<h5>フィールド</h5>
+									&lt;div class="<b>input-field</b>&gt;</br>
+									 &nbsp; &lt;<b>input</b> id="hoge" type="下記のうちいずれかを指定" class="validate"&gt;</br>
+									 &nbsp; &lt;<b>label</b> for="hoge"&gt;ラベルの文字列&lt;/label&gt;</br>
+									&lt;/div&gt;</br>
+									</br>
+									inputタグにclass="validate"を指定することで、typeにあわせた入力値のチェックが可能です。</br>
+
+						      <div class="row">
+						        <div class="input-field col s6">
+						          <input id="last_name" type="text" class="validate">
+						          <label for="last_name">type=&quot;text&quot;</label>
+						        </div>
+						        <div class="input-field col s6">
+						          <input placeholder="inputタグにplaceholder=&quot;文章&quot;でここの指定" id="first_name" type="text" class="validate">
+						          <label for="first_name">type=&quot;text&quot;</label>
+						        </div>
+						      </div>
+						      <div class="row">
+						        <div class="input-field col s12 m6">
+						          <input id="password" type="password" class="validate">
+						          <label for="password">type=&quot;password&quot;</label>
+						        </div>
+						        <div class="input-field col s12 m6">
+						          <input id="email" type="email" class="validate">
+						          <label for="email">type=&quot;email&quot;</label>
+						        </div>
+						      </div>
+						    </form>
+						  </div>
+
+							<div class="row">
+								<form class="col s12">
+									<h5>セレクトボックス</h5>
+									&lt;div class="input-field&gt;</br>
+									 &nbsp; &lt;<b>select</b>&gt;</br>
+										&nbsp;&nbsp; &lt;<b>option</b> value="" <b>disabled selected</b>&gt;選んでください&lt;/option&gt;</br>
+										&nbsp;&nbsp; &lt;<b>option</b> value="1"&gt;選択肢1&lt;/option&gt;</br>
+ 										&nbsp;&nbsp; &lt;<b>option</b> value="2"&gt;選択肢2&lt;/option&gt;</br>
+ 										&nbsp;&nbsp; &lt;<b>option</b> value="3"&gt;選択肢3&lt;/option&gt;</br>
+									 &nbsp; &lt;/select&gt;</br>
+									 &nbsp; &lt;label&gt;ラベルの文字列&lt;/label&gt;</br>
+									&lt;/div&gt;</br>
+									</br>
+									optionタグのdisabledで選択不可に、selectedでデフォルトの選択肢を決定できます。</br>
+									</br>
+
+									<div class="input-field col s6">
+										<select>
+											<option value="" disabled selected>選んでください</option>
+											<option value="選択肢1">A</option>
+											<option value="選択肢2">B</option>
+											<option value="選択肢3">C</option>
+										</select>
+										<label>ラベルの文字列</label>
+									</div>
+							</form>
+						</div>
+
+
+
+
+							<div class="row">
+								<div class="col s4">
+
+
+
+								</div>
+								<div class="col s4">
+
+									<h5>ラジオボタン</h5>
+									<div>
+										<form action="#">
+									    <p>
+									      <input name="group1" type="radio" id="test1" />
+									      <label for="test1">選べる</label>
+									    </p>
+									    <p>
+									      <input name="group1" type="radio" id="test2" />
+									      <label for="test2">選べる</label>
+									    </p>
+									    <p>
+									      <input name="group1" type="radio" id="test4" disabled="disabled" />
+									      <label for="test4">選べない</label>
+									    </p>
+									  </form>
+									</div>
+
+								</div>
+								<div class="col s4">
+									<h5>チェックボックス</h5>
+
+									<div>
+										<form action="#">
+									    <p>
+									      <input type="checkbox" id="test5" />
+									      <label for="test5">未選択</label>
+									    </p>
+									    <p>
+									      <input type="checkbox" id="test6" checked="checked" />
+									      <label for="test6">選択済み</label>
+									    </p>
+									    <p>
+									      <input type="checkbox" class="filled-in" id="filled-in-box"/>
+									      <label for="filled-in-box">エフェクト違い</label>
+									    </p>
+									    <p>
+									      <input type="checkbox" id="test7" disabled="disabled" />
+									      <label for="test7">選べない</label>
+									    </p>
+									  </form>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col s4">
+									<h5>スイッチ</h5>
+									<div class="switch">
+								    <label>
+								      Off
+								      <input type="checkbox">
+								      <span class="lever"></span>
+								      On
+								    </label>
+								  </div>
+									</br>
+								  <div class="switch">
+								    <label>
+								      オフ
+								      <input disabled type="checkbox">
+								      <span class="lever"></span>
+								      オン
+								    </label>
+								  </div>
+								</div>
+
+								<div class="col s4">
+									<h5>日付入力</h5>
+									<div>
+										<input type="date" class="datepicker">
+									</div>
+								</div>
+
+								<div class="col s4">
+									<h5>ファイル入力</h5>
+									<div>
+										<form action="#">
+									    <div class="file-field input-field">
+												<div class="btn">
+													<span>選択</span>
+													<input type="file" />
+												</div>
+
+												<div class="col offset-s1">
+													<input class="file-path validate" type="text"/>
+												</div>
+									    </div>
+									  </form>
+									</div>
+								</div>
+							</div>
+
+							<h5>レンジ</h5>
+							<div>
+								<form action="#">
+									<div class="row">
+										<div class="col center">
+											0
+										</div>
+										<div class="col s10">
+											<p class="range-field">
+												<input type="range" id="test5" min="0" max="100" />
+											</p>
+										</div>
+										<div class="col center">
+											100
+										</div>
+
+								</form>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 						</div>
 		      </div>
 		    </div>
