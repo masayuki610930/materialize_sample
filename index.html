@@ -2,6 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<title>Materializeの使い方</title>
+
+
+		<link href="src/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="src/google-code-prettify/prettify.js"></script>
 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="src/materialize/css/materialize.min.css"  media="screen,projection"/>
@@ -14,14 +19,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
-  <body>
-
-
-
-
+  <body  onload="prettyPrint()">
 
 		<!-- ナビゲーションバーの設置 -->
 		<div  class="navbar-fixed">
+
+			<!-- Dropdown Structure -->
+			<ul id="dropdown1" class="dropdown-content">
+			  <li><a href="index.html#field">フィールド</a></li>
+			  <li><a href="index.html#selectbox">セレクトボックス</a></li>
+			  <li><a href="index.html#radiobutton">ラジオボタン</a></li>
+			  <li><a href="index.html#checkbox">チェックボックス</a></li>
+			  <li><a href="index.html#range">レンジ</a></li>
+			  <li><a href="index.html#date">日付</a></li>
+			  <li><a href="index.html#switch">スイッチ</a></li>
+			  <li><a href="index.html#file-input">ファイル</a></li>
+			</ul>
+
 			<nav>
 				<div class="nav-wrapper yellow darken-3">
 					<a href="#" class="brand-logo right">Materializeの使い方</a>
@@ -32,6 +46,7 @@
 						<li class="waves-effect waves-light"><a href="index.html#card">カード</a></li>
 						<li class="waves-effect waves-light"><a href="index.html#icon">アイコン</a></li>
 						<li class="waves-effect waves-light"><a href="index.html#button">ボタン</a></li>
+						<li><a class="waves-effect waves-light　dropdown-button" data-activates="dropdown1">入力フォーム<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 
 					<ul class="side-nav" id="mobile-demo">
@@ -39,13 +54,14 @@
 						<li><a href="index.html#card">カード</a></li>
 						<li><a href="index.html#icon">アイコン</a></li>
 						<li><a href="index.html#button">ボタン</a></li>
+						<li><a href="index.html#input-form">入力フォーム</a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 
 
-		<!-- materializeの導入 -->
+		<!-- materializeの導入について -->
 		<div class="row">
 			<div class="col s12 m10 offset-m1  l8 offset-l2">
 
@@ -61,7 +77,7 @@
 								</br>
 								とにかくMaterializeの使い方を早く知りたいよ！！という方向けに、ソースを明示しながら紹介していきます。</br>
 								</br>
-								このページのソースを<a href="https://github.com/masayuki610930/materialize_sample">Githubに公開</a>してます。
+								このページのソースは<a href="https://github.com/masayuki610930/materialize_sample">Githubに公開</a>してます。
 						</p>
 						</div>
 			    </li>
@@ -132,13 +148,15 @@
             <p>
 							マテリアルデザインでおなじみ、<a href="http://materializecss.com/cards.html">カード</a>がつくれ、このように画像をいれたり、リンク先を指定ができます。</br>
 							</br>
-							カードは&lt;div class="<b>card</b>"&gt;にて作れ、その入れ子として</br>
-							&lt;div class="<b>card-image</b>"&gt;</br>
-							&lt;div class="<b>card-content</b>"&gt;</br>
-							&lt;div class="<b>card-action</b>"&gt;</br>があります。</br>
-						</br>
-						右（もしくは下）のカードはマウスオーバーで浮き上がるエフェクトがついてます。これは、hoverableを指定することで可能です。</br>
-						&lt;div class="card <b>hoverable</b>"&gt;
+							カードは&lt;div class="<b>card</b>"&gt;にて作れ、次の構造を取ります。
+<pre class="prettyprint lang-html">
+&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card-image&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;card-content&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;card-action&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+							右（もしくは下）のカードはマウスオーバーで浮き上がるエフェクトがついてます。これは、hoverableを指定することで可能です。
+							<pre class="prettyprint lang-html">&lt;div class="card <b>hoverable</b>"&gt;</pre>
 						</p>
           </div>
 
@@ -168,17 +186,14 @@
 							materializeではたくさんのアイコンを簡単に使えます。</br>
 						  </br>
 							準備として、cssを読み込みましょう。</br>
-							</br>
-							&lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;</br>
-							</br>
+							<pre class="prettyprint lang-html">&lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;</pre>
 							アイコンはタグiで書くことができます。</br>
 							</br>
-							&lt;i class="material-icons"&gt;info_outline&lt;/i&gt;</br>
+							<pre class="prettyprint lang-html">&lt;i class="material-icons"&gt;info_outline&lt;/i&gt;</pre>
 							</br>
 							iタグの中に<a href="http://materializecss.com/icons.html">アイコン一覧</a>の各アイコンの下にある文字列を指定すれば種類が変わります。</br>
 							上のiタグの例：<i class="material-icons">info_outline</i>
-						</p>
-	        </div>
+						</p>	        </div>
 
 	      </div>
       </div>
@@ -196,25 +211,27 @@
 							<h5>種類</h5>
 								aタグやbuttonタグのclassにbtnをつけるだけです。お手軽！</br>
 								</br>
-							標準のボタン　：　&lt;a class="<b>btn</b>"&gt;ボタン&lt;/a&gt;</br>
-							<a class="btn">ボタン</a></br></br>
-							左アイコンのボタン　：　&lt;a class="btn"&gt;&lt;i class="material-icons <b>left</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</br>
-							<a class="btn"><i class="material-icons left">thumb_up</i>ボタン</a></br></br>
-							右アイコンのボタン　：　&lt;a class="btn"&gt;&lt;i class="material-icons <b>right</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</br>
-							<a class="btn"><i class="material-icons right">thumb_up</i>ボタン</a></br></br>
-							submitボタン　：　&lt;<b>button</b> class="btn" <b>type="submit"</b> name="action"&gt;Submit&lt;<b>/button</b>&gt;</br>
-							<button class="btn" type="submit" name="action">Submit</button></br></br>
-							floating ボタン　：　&lt;a class="<b>btn-floating</b>"&gt;&lt;i class="material-icons"&gt;add&lt;/i&gt;ボタン&lt;/a&gt;</br>
-							<a class="btn-floating"><i class="material-icons">add</i></a></br></br>
+							<a class="btn">ボタン</a>　標準のボタン</br>
+							<pre class="prettyprint lang-html">&lt;a class="<b>btn</b>"&gt;ボタン&lt;/a&gt;</pre>
+							</br>
+							<a class="btn"><i class="material-icons left">thumb_up</i>ボタン</a>　左アイコンのボタン</br>
+							<pre class="prettyprint lang-html">&lt;a class="btn"&gt;&lt;i class="material-icons <b>left</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</pre>
+							</br>
+							<a class="btn"><i class="material-icons right">thumb_up</i>ボタン</a>　右アイコンのボタン</br>
+							<pre class="prettyprint lang-html">&lt;a class="btn"&gt;&lt;i class="material-icons <b>right</b>"&gt;thumb_up&lt;/i&gt;ボタン&lt;/a&gt;</pre>
+							</br>
+							<a class="btn-floating"><i class="material-icons">add</i></a>　floating ボタン</br>
+							<pre class="prettyprint lang-html">&lt;a class="<b>btn-floating</b>"&gt;&lt;i class="material-icons"&gt;add&lt;/i&gt;ボタン&lt;/a&gt;</pre>
 							</br>
 
 							<h5>エフェクト</h5>
 							マテリアルデザイン特有のエフェクトも付けれます！</br>
 							</br>
-							waves-effect　：　&lt;a class="btn <b>waves-effect</b>"&gt;ボタン&lt;/a&gt;</br>
-							<a class="btn waves-effect ">ボタン</a></br></br>
-							waves-light　：　&lt;a class="btn waves-effect <b>waves-light</b>"&gt;ボタン&lt;/a&gt;</br>
-							<a class="btn waves-effect waves-light">ボタン</a></br></br>
+							<a class="btn waves-effect ">ボタン</a>　waves-effect</br>
+							<pre class="prettyprint lang-html">&lt;a class="btn <b>waves-effect</b>"&gt;ボタン&lt;/a&gt;</br></pre>
+							</br>
+							<a class="btn waves-effect waves-light">ボタン</a>　waves-light</br>
+							<pre class="prettyprint lang-html">&lt;a class="btn waves-effect <b>waves-light</b>"&gt;ボタン&lt;/a&gt;</pre>
 							</br>
 
 							<h5>画面右下のボタン</h5>
@@ -242,7 +259,7 @@
 		<!-- フォームの説明 -->
 		<div class="row">
       <div class="col s12 m10 offset-m1 l8 offset-l2">
-				<h3 id="button">入力フォーム</h3>
+				<h3 id="input-form">入力フォーム</h3>
 				<div class="card">
 					<div class="card-content">
 							Materializeを使えば入力フォームだって簡単です！</br>
@@ -250,14 +267,14 @@
 
 							<div class="row">
 								<form class="col s12">
-									<h5>フィールド</h5>
-									&lt;div class="<b>input-field</b>&gt;</br>
-									 &nbsp; &lt;<b>input</b> id="hoge" type="下記のうちいずれかを指定" class="validate"&gt;</br>
-									 &nbsp; &lt;<b>label</b> for="hoge"&gt;ラベルの文字列&lt;/label&gt;</br>
-									&lt;/div&gt;</br>
-									</br>
+									<h5 id="field">フィールド</h5>
+									<pre class="prettyprint lang-html">
+&lt;div class=&quot;input-field&quot;&gt;
+  &lt;input id=&quot;hoge&quot; type=&quot;下の例のいずれかを指定&quot; class=&quot;validate&quot;&gt;
+  &lt;label for=&quot;hoge&quot;&gt;ラベルの文字列&lt;/label&gt;
+&lt;/div&gt;</pre>
 									inputタグにclass="validate"を指定することで、typeにあわせた入力値のチェックが可能です。</br>
-
+									</br>
 						      <div class="row">
 						        <div class="input-field col s6">
 						          <input id="last_name" type="text" class="validate">
@@ -283,92 +300,117 @@
 
 							<div class="row">
 								<form class="col s12">
-									<h5>セレクトボックス</h5>
-									&lt;div class="input-field&gt;</br>
-									 &nbsp; &lt;<b>select</b>&gt;</br>
-										&nbsp;&nbsp; &lt;<b>option</b> value="" <b>disabled selected</b>&gt;選んでください&lt;/option&gt;</br>
-										&nbsp;&nbsp; &lt;<b>option</b> value="1"&gt;選択肢1&lt;/option&gt;</br>
- 										&nbsp;&nbsp; &lt;<b>option</b> value="2"&gt;選択肢2&lt;/option&gt;</br>
- 										&nbsp;&nbsp; &lt;<b>option</b> value="3"&gt;選択肢3&lt;/option&gt;</br>
-									 &nbsp; &lt;/select&gt;</br>
-									 &nbsp; &lt;label&gt;ラベルの文字列&lt;/label&gt;</br>
-									&lt;/div&gt;</br>
-									</br>
+									<h5 id="selectbox">セレクトボックス</h5>
+
+									<pre class="prettyprint lang-html">
+&lt;div class=&quot;input-field&quot;&gt;
+  &lt;select&gt;
+    &lt;option value=&quot;&quot; disabled selected&gt;選んでください&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;選択肢1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;選択肢2&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;選択肢3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label&gt;ラベルの文字列&lt;/label&gt;
+&lt;/div&gt;</pre>
 									optionタグのdisabledで選択不可に、selectedでデフォルトの選択肢を決定できます。</br>
+									</br>
+									javascriptで初期化処理が必要です。</br>
+									$('select').material_select();</br>
 									</br>
 
 									<div class="input-field col s6">
 										<select>
 											<option value="" disabled selected>選んでください</option>
-											<option value="選択肢1">A</option>
-											<option value="選択肢2">B</option>
-											<option value="選択肢3">C</option>
+											<option value="1">選択肢1</option>
+											<option value="2">選択肢2</option>
+											<option value="3">選択肢3</option>
 										</select>
 										<label>ラベルの文字列</label>
 									</div>
-							</form>
-						</div>
+								</form>
+							</div>
+							<HR>
 
 
-
-
+							以下の入力フォーム詳細は<a href="http://materializecss.com/forms.html">公式サイト</a>を読んでください。こんなのもあるよ！という紹介だけします。</br>
+							</br>
 							<div class="row">
-								<div class="col s4">
-
-
-
-								</div>
-								<div class="col s4">
-
-									<h5>ラジオボタン</h5>
+								<div class="col s12 m4">
+									<h5 id="radiobutton">ラジオボタン</h5>
 									<div>
 										<form action="#">
-									    <p>
-									      <input name="group1" type="radio" id="test1" />
-									      <label for="test1">選べる</label>
-									    </p>
-									    <p>
-									      <input name="group1" type="radio" id="test2" />
-									      <label for="test2">選べる</label>
-									    </p>
-									    <p>
-									      <input name="group1" type="radio" id="test4" disabled="disabled" />
-									      <label for="test4">選べない</label>
-									    </p>
-									  </form>
+											<p>
+												<input name="group1" type="radio" id="test1" />
+												<label for="test1">選べる</label>
+											</p>
+											<p>
+												<input name="group1" type="radio" id="test2" />
+												<label for="test2">選べる</label>
+											</p>
+											<p>
+												<input name="group1" type="radio" id="test4" disabled="disabled" />
+												<label for="test4">選べない</label>
+											</p>
+										</form>
 									</div>
-
 								</div>
-								<div class="col s4">
-									<h5>チェックボックス</h5>
 
+								<div class="col s12 m4">
+									<h5 id="checkbox">チェックボックス</h5>
 									<div>
 										<form action="#">
-									    <p>
-									      <input type="checkbox" id="test5" />
-									      <label for="test5">未選択</label>
-									    </p>
-									    <p>
-									      <input type="checkbox" id="test6" checked="checked" />
-									      <label for="test6">選択済み</label>
-									    </p>
-									    <p>
-									      <input type="checkbox" class="filled-in" id="filled-in-box"/>
-									      <label for="filled-in-box">エフェクト違い</label>
-									    </p>
-									    <p>
-									      <input type="checkbox" id="test7" disabled="disabled" />
-									      <label for="test7">選べない</label>
-									    </p>
-									  </form>
+											<p>
+												<input type="checkbox" id="test5" />
+												<label for="test5">未選択</label>
+											</p>
+											<p>
+												<input type="checkbox" id="test6" checked="checked" />
+												<label for="test6">選択済み</label>
+											</p>
+											<p>
+												<input type="checkbox" class="filled-in" id="filled-in-box"/>
+												<label for="filled-in-box">エフェクト違い</label>
+											</p>
+											<p>
+												<input type="checkbox" id="test7" disabled="disabled" />
+												<label for="test7">選べない</label>
+											</p>
+										</form>
 									</div>
+								</div>
 
+								<div class="col s12 m4">
+									<h5 id="range">レンジ</h5>
+									<div>
+										<form action="#">
+											<div class="row">
+												<div class="col s2 center">
+													0
+												</div>
+												<div class="col s8">
+													<p class="range-field">
+														<input type="range" id="test5" min="0" max="100" />
+													</p>
+												</div>
+												<div class="col s2 center">
+													100
+												</div>
+											</div>
+										</form>
+									</div>
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="col s4">
-									<h5>スイッチ</h5>
+								<div class="col s12 m4">
+									<h5 id="date">日付</h5>
+									<div>
+										<input type="date" class="datepicker">
+									</div>
+								</div>
+
+								<div class="col s12 m4">
+									<h5 id="switch">スイッチ</h5>
 									<div class="switch">
 								    <label>
 								      Off
@@ -388,15 +430,8 @@
 								  </div>
 								</div>
 
-								<div class="col s4">
-									<h5>日付入力</h5>
-									<div>
-										<input type="date" class="datepicker">
-									</div>
-								</div>
-
-								<div class="col s4">
-									<h5>ファイル入力</h5>
+								<div class="col s12 m4">
+									<h5 id="file-input">ファイル</h5>
 									<div>
 										<form action="#">
 									    <div class="file-field input-field">
@@ -414,42 +449,6 @@
 								</div>
 							</div>
 
-							<h5>レンジ</h5>
-							<div>
-								<form action="#">
-									<div class="row">
-										<div class="col center">
-											0
-										</div>
-										<div class="col s10">
-											<p class="range-field">
-												<input type="range" id="test5" min="0" max="100" />
-											</p>
-										</div>
-										<div class="col center">
-											100
-										</div>
-
-								</form>
-							</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 						</div>
 		      </div>
 		    </div>
@@ -457,39 +456,23 @@
 		</div>
 
 
-色、フォーム、サイズ
-
-
-
-
-
-
-
-
+		<!-- 先頭へ飛ぶボタン -->
 		<div class="row">
-			<div class="col s12 m9 offset-m5 l6 offset-l7">
-				<div class="col s9 m7 l7">
-					<div class="card hoverable">
-	          <div class="card-content" style="padding: 0px;">
-							<div class="input-field col s12">
-			          <i class=" material-icons prefix  yellow-text text-darken-3">account_circle</i>
-			          <input id="icon_prefix" type="text" class="validate">
-			          <label for="icon_prefix">user name or account name</label>
-			        </div>
-	          </div>
-	        </div>
-	      </div>
-	      <div class="col s2" style="padding-top: 10px;">
-					<div class="input-field">
-	        	<a class="waves-effect waves-light btn  yellow darken-3"><i class="material-icons">search</i></a>
-	        </div>
-	      </div>
+			<div class="col s2 offset-s5">
+				<div>
+					<a class="btn-floating btn-large" href="index.html#introduction"><i class="large material-icons">open_in_browser</i>ボタン</a>
+				</div>
 			</div>
-    </div>
+		</div>
 
 
-
-
+		<!-- footer -->
+		<div class="footer-copyright yellow darken-3">
+			<div class="container grey-text text-lighten-4">
+			© 2015 Copyright masayuki610930
+			<a class="grey-text text-lighten-4 right" href="https://github.com/masayuki610930/materialize_sample/tree/gh-pages">GitHub Link</a>
+			</div>
+		</div>
 
 
 

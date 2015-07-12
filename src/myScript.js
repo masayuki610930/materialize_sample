@@ -1,13 +1,12 @@
 $( document ).ready(function(){
 
-  // 横のナビゲータ（スマホ・タブレット向け）の設定
+  // 横のナビゲータの設定
   $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
 
   // 導入のところ
-  $(document).ready(function(){
-    $('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    });
+  $('.collapsible').collapsible({
+    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
 
   // 円形のボタン
@@ -35,5 +34,8 @@ $( document ).ready(function(){
 		return false;
 		}
 	});
+
+  // google-code-prettify
+  //prettyPrint();
 
 });
