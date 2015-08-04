@@ -13,6 +13,10 @@ $( document ).ready(function(){
   $('.fixed-action-btn').openFAB();
   $('.fixed-action-btn').closeFAB();
 
+  // 文字入力制限付きのinput-field
+  $('input#input_text').characterCounter();
+  $('div.input-field span:last-child').remove();
+
   // セレクトボックス
   $('select').material_select();
 
